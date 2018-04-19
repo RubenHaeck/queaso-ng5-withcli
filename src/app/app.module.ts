@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { EmployeeService } from './employee.service';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { HomeComponent } from './home/home.component';
     BrowserModule
   ],
   providers: [
+    EmployeeService
   ],
   bootstrap: [AppComponent]
 })

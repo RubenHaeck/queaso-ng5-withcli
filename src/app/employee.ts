@@ -3,4 +3,9 @@ export class Employee {
   firstName: string;
   age: number;
   isDeveloper: boolean;
+
+  constructor(lastName: string, firstName: string) {
+    this.lastName = lastName;
+    this.firstName = firstName;
+   }
 }

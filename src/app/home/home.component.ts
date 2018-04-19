@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { EmployeeService } from '../employee.service';
+import { Employee } from '../employee';
 
 @Component({
   selector: 'queaso-home',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  employees: Array<Employee>;
+  @Input() title: string;
+
+  constructor(private employeeService: EmployeeService) { }
 
   ngOnInit() {
+    this.employees = this.employeeService.getEmployees();
   }
 
 }
